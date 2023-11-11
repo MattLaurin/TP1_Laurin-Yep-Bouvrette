@@ -1,0 +1,15 @@
+.idea/
+out/
+ChatClient/.idea/
+ChatClient/out/
+ChatClient/.gitignore
+ChatClient/ChatClient.iml
+ChatServer/.idea/
+ChatServer/out/
+ChatServer/.gitignore
+ChatServer/ChatServer.iml
+JeuEchecs/.idea/
+JeuEchecs/out/
+JeuEchecs/.gitignore
+JeuEchecs/JeuEchecs.iml
+

@@ -40,17 +40,22 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont voisines, false sinon.
      */
-    public boolean estVoisineDe(Position p) {
-        throw new NotImplementedException();
+    public boolean estVoisineDe(Position p) {   // **completer**
+        int x = Math.abs(getColonne() - p.colonne);
+        int y = Math.abs(getLigne() - p.ligne);
+        return x <= 1 && y <= 1;
+        //throw new NotImplementedException();
     }
+
     /**
      * Indique si 2 positions sont sur la même ligne sur un échiquier.
      *
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont sur la même ligne, false sinon.
      */
-    public boolean estSurLaMemeLigneQue(Position p) {
-        throw new NotImplementedException();
+    public boolean estSurLaMemeLigneQue(Position p) {   //**completer**
+        return getLigne() == p.ligne;
+        //throw new NotImplementedException();
     }
     /**
      * Indique si 2 positions sont sur la même colonne sur un échiquier.
@@ -58,8 +63,9 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont sur la même colonne, false sinon.
      */
-    public boolean estSurLaMemeColonneQue(Position p) {
-        throw new NotImplementedException();
+    public boolean estSurLaMemeColonneQue(Position p) {    //**completer**
+        return getColonne() == p.colonne;
+        //throw new NotImplementedException();
     }
     /**
      * Indique si 2 positions sont sur la même diagonale sur un échiquier.
@@ -67,7 +73,8 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont sur la même diagonale, false sinon.
      */
-    public boolean estSurLaMemeDiagonaleQue(Position p) {
-        throw new NotImplementedException();
+    public boolean estSurLaMemeDiagonaleQue(Position p) {   //**completer**
+        return Math.abs(getColonne() - p.colonne) == Math.abs(getLigne() - p.ligne);
+        //throw new NotImplementedException();
     }
 }

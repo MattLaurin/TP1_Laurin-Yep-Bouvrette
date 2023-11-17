@@ -61,8 +61,23 @@ public class PartieEchecs {
      * @return boolean true, si le déplacement a été effectué avec succès, false sinon
      */
     public boolean deplace(Position initiale, Position finale) {
-         throw new NotImplementedException();
+        boolean peutDeplacer = true;
+        if (!EchecsUtil.positionValide(initiale) || !EchecsUtil.positionValide(finale))
+            peutDeplacer = false;
+        if (echiquier[initiale.getColonne()][initiale.getLigne()] == null)
+            peutDeplacer = false;
+        if (echiquier[initiale.getColonne()][initiale.getLigne()].getCouleur() != getTour())
+            peutDeplacer = false;
+        if (echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == getTour())
+            peutDeplacer = false;
+
+        if (peutDeplacer)
+            echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
+
+        return peutDeplacer;
+        //throw new NotImplementedException();
     }
+
 
     /**
      * Vérifie si un roi est en échec et, si oui, retourne sa couleur sous forme

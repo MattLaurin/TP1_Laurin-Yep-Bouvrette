@@ -10,7 +10,7 @@ public class Roi extends Piece{
         super(couleur);
     }
 
-    public boolean peutSeDeplacer(Position pos1, Position pos2, Piece[][] echiquier) {
+    public boolean peutSeDeplacer(Position pos1, Position pos2, Piece[][] echiquier) { //castle
         return pos1.estVoisineDe(pos2);
     }
 }

@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Cavalier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Dame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Fou.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Pion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Roi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Adam 1 push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Roi.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Roi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +52,15 @@
       <option name="presentableId" value="Default" />
       <updated>1699736481846</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adam 1 push">
+      <option name="closed" value="true" />
+      <created>1700233217134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700233217134</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adam 1 push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adam 1 push" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.echecs;
 
-import com.echecs.pieces.Piece;
+import com.echecs.pieces.*;
 import com.echecs.util.EchecsUtil;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -33,6 +33,33 @@ public class PartieEchecs {
      */
     public PartieEchecs() {
         echiquier = new Piece[8][8];
+
+        //piece noir
+        echiquier[0][0] = new Tour('n');    //**soit 7 ou 8 pour position**
+        echiquier[1][0] = new Cavalier('n');
+        echiquier[2][0] = new Fou('n');
+        echiquier[3][0] = new Dame('n');
+        echiquier[4][0] = new Roi('n');
+        echiquier[5][0] = new Fou('n');
+        echiquier[6][0] = new Cavalier('n');
+        echiquier[7][0] = new Tour('n');
+        for (int i = 0; i < 8; i++)
+            echiquier[i][6] = new Pion('n') {
+            };
+
+        //piece blanche
+        echiquier[0][7] = new Tour('b');
+        echiquier[1][7] = new Cavalier('b');
+        echiquier[2][7] = new Fou('b');
+        echiquier[3][7] = new Dame('b');
+        echiquier[4][7] = new Roi('b');
+        echiquier[5][7] = new Fou('b');
+        echiquier[6][7] = new Cavalier('b');
+        echiquier[7][7] = new Tour('b');
+        for (int i = 0; i < 8; i++)
+            echiquier[i][1] = new Pion('n') {
+            };
+
         //Placement des pièces :
 
     }
@@ -71,7 +98,8 @@ public class PartieEchecs {
         if (echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == getTour())
             peutDeplacer = false;
 
-        if (peutDeplacer)
+        //castle
+        if (peutDeplacer) // necessaire??
             echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
 
         return peutDeplacer;
@@ -92,7 +120,28 @@ public class PartieEchecs {
      * si le roi blanc est en échec, tout autre caractère, sinon.
      */
     public char estEnEchec() {
-            throw new NotImplementedException();
+        char enEchec = '.';
+        char couleur1;
+        char couleur2;
+        Position roi1 = null;
+        Position roi2 = null;
+        // trouver rois
+        for (int i = 0; i < echiquier.length; i++)
+            for (int j = 0; j < echiquier.length; j++)
+                if (echiquier[i][j] instanceof Roi ) {
+                    if (roi1 != null) {
+                        roi2 = EchecsUtil.getPosition((byte) j, (byte) i);
+                        couleur2 = echiquier[i][j].getCouleur();
+                    }
+                    else {
+                        roi1 = EchecsUtil.getPosition((byte) j, (byte) i);
+                        couleur1 = echiquier[i][j].getCouleur();
+                    }
+                }
+        // regarder echec
+
+        return enEchec;
+        //throw new NotImplementedException();
     }
     /**
      * Retourne la couleur n ou b du joueur qui a la main.

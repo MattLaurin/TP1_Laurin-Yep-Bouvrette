@@ -11,6 +11,9 @@ public class Roi extends Piece{
     }
 
     public boolean peutSeDeplacer(Position pos1, Position pos2, Piece[][] echiquier) { //castle
-        return pos1.estVoisineDe(pos2);
+        if (Math.abs(pos1.getColonne() - pos2.getColonne()) == 2)
+            return true;
+        else
+            return pos1.estVoisineDe(pos2);
     }
 }

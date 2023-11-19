@@ -2,7 +2,6 @@ package com.echecs;
 
 import com.echecs.pieces.*;
 import com.echecs.util.EchecsUtil;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * Représente une partie de jeu d'échecs. Orcheste le déroulement d'une partie :
@@ -22,6 +21,11 @@ public class PartieEchecs {
     private String aliasJoueur1, aliasJoueur2;
     private char couleurJoueur1, couleurJoueur2;
 
+    private boolean roqueDroitBlanc = true;
+    private boolean roqueGaucheBlanc = true;
+    private boolean roqueDroitNoir = true;
+    private boolean roqueGaucheNoir = true;
+
     /**
      * La couleur de celui à qui c'est le tour de jouer (n ou b).
      */
@@ -35,7 +39,7 @@ public class PartieEchecs {
         echiquier = new Piece[8][8];
 
         //piece noir
-        echiquier[0][0] = new Tour('n');    //**soit 7 ou 8 pour position**
+        echiquier[0][0] = new Tour('n');
         echiquier[1][0] = new Cavalier('n');
         echiquier[2][0] = new Fou('n');
         echiquier[3][0] = new Dame('n');
@@ -90,17 +94,72 @@ public class PartieEchecs {
     public boolean deplace(Position initiale, Position finale) {
         boolean peutDeplacer = true;
         if (!EchecsUtil.positionValide(initiale) || !EchecsUtil.positionValide(finale))
-            peutDeplacer = false;
+            return false;
         if (echiquier[initiale.getColonne()][initiale.getLigne()] == null)
-            peutDeplacer = false;
+            return false;
         if (echiquier[initiale.getColonne()][initiale.getLigne()].getCouleur() != getTour())
-            peutDeplacer = false;
+            return false;
         if (echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == getTour())
+            return false;
+        if (initiale.getColonne() == finale.getColonne() && initiale.getLigne() == finale.getLigne())
+            return false;
+
+        if (echiquier[initiale.getColonne()][initiale.getLigne()] instanceof Roi && Math.abs(initiale.getColonne() - finale.getColonne()) == 2) { // veut faire un roque
+            int directionRoque = finale.getColonne() - initiale.getColonne();
+            int x = initiale.getColonne();
+            char enEchec = 0;
+            if (getTour() == 'b') {
+                if ((directionRoque == -2 && roqueGaucheBlanc) || (directionRoque == 2 && roqueDroitBlanc)){
+                    directionRoque = directionRoque/2;
+                    x += directionRoque;
+                    while (x != finale.getColonne() + directionRoque && echiquier[x][1] == null && enEchec == getTour()) {
+                        echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
+                        enEchec = estEnEchec();
+                        echiquier[x][initiale.getLigne()] = null;
+                        x += directionRoque;
+                    }
+                    peutDeplacer = x == finale.getColonne();
+                } else
+                    return false;
+
+            } else {
+                if ((directionRoque == -2 && roqueGaucheNoir) || (directionRoque == 2 && roqueDroitNoir)){
+                    directionRoque = directionRoque/2;
+                    x += directionRoque;
+                    while (x != finale.getColonne() + directionRoque && echiquier[x][8] == null && enEchec == getTour()) {
+                        echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
+                        enEchec = estEnEchec();
+                        echiquier[x][initiale.getLigne()] = null;
+                        x += directionRoque;
+                    }
+                    peutDeplacer = x == finale.getColonne();
+                } else
+                    return false;
+            }
+        }
+
+        if (peutDeplacer)   // si piece peut se deplace
+            peutDeplacer = echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
+        if (estEnEchec() == getTour())
             peutDeplacer = false;
 
-        //castle
-        if (peutDeplacer) // necessaire??
-            echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
+        if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace
+            this.roqueGaucheBlanc = false;
+        if (initiale.getColonne() == 'h' && initiale.getLigne() == 1 && peutDeplacer && roqueDroitBlanc)
+            this.roqueDroitBlanc = false;
+        if (initiale.getColonne() == 'a' && initiale.getLigne() == 8 && peutDeplacer && roqueGaucheNoir)
+            this.roqueGaucheNoir = false;
+        if (initiale.getColonne() == 'h' && initiale.getLigne() == 8 && peutDeplacer && roqueDroitNoir)
+            this.roqueDroitNoir = false;
+
+        if (initiale.getColonne() == 'e' && initiale.getLigne() == 1 && peutDeplacer && (roqueGaucheBlanc || roqueDroitBlanc)) { // roit deja deplace
+            this.roqueGaucheBlanc = false;
+            this.roqueDroitBlanc = false;
+        }
+        if (initiale.getColonne() == 'e' && initiale.getLigne() == 8 && peutDeplacer && (roqueGaucheNoir || roqueDroitNoir)) {
+            this.roqueGaucheNoir = false;
+            this.roqueDroitNoir = false;
+        }
 
         return peutDeplacer;
         //throw new NotImplementedException();
@@ -121,8 +180,8 @@ public class PartieEchecs {
      */
     public char estEnEchec() {
         char enEchec = '.';
-        char couleur1;
-        char couleur2;
+        char couleur1 = 0;
+        char couleur2 = 0;
         Position roi1 = null;
         Position roi2 = null;
         // trouver rois
@@ -138,8 +197,20 @@ public class PartieEchecs {
                         couleur1 = echiquier[i][j].getCouleur();
                     }
                 }
-        // regarder echec
-
+        // trouver piece qui peut se deplacer sur roi
+        for (int i = 0; i < echiquier.length; i++)
+            for (int j = 0; j < echiquier.length; j++)
+                if (echiquier[i][j] != null){
+                    if (echiquier[i][j].getCouleur() != couleur1){
+                        if (echiquier[i][j].peutSeDeplacer(EchecsUtil.getPosition((byte)j, (byte)i), roi1, echiquier)){
+                            return couleur1;
+                        }
+                    } else {
+                        if (echiquier[i][j].peutSeDeplacer(EchecsUtil.getPosition((byte)j, (byte)i), roi2, echiquier)) {
+                            return couleur2;
+                        }
+                    }
+                }
         return enEchec;
         //throw new NotImplementedException();
     }

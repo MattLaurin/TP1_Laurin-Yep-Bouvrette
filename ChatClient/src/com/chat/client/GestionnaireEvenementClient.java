@@ -49,6 +49,13 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     for (String s:membres)
                         System.out.println("\t\t\t- "+s);
                     break;
+                case "HIST":
+                    arg = evenement.getArgument();
+                    String[] msg = arg.split("\n");
+                    for (String string : msg)
+                        System.out.println("\t\t\t"+"."+string);
+                    break;
+
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }

@@ -208,6 +208,12 @@ public class ServeurChat extends Serveur {
             }
         }
     }
+    public void commandeChess(String alias1, String alias2){
+        // Pour vérifier s'ils sont dans un salon privé
+        if (salonExistant(alias1,alias2) != null) {
+            SalonPrive salon = salonExistant(alias1, alias2);
+        }
+    }
 
     public void informerQuit(String alias1, String alias2){
         String message = alias1 + " A quitter le salon privé avec " + alias2;

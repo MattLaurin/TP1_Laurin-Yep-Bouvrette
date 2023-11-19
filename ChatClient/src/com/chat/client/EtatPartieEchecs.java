@@ -37,7 +37,6 @@ public class EtatPartieEchecs {
 
     @Override
     public String toString() {
-        char[][] echiquierAff = new char[9][9];
         String affichage = null;
 
         for (int i = 0; i < 8; i++) {

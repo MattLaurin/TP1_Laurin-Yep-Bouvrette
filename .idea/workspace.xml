@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Adam 2 push">
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="partie 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/SalonPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/SalonPrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Roi.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/pieces/Roi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/PartieEchecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/PartieEchecs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/Position.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700259016012</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="partie 4">
+      <option name="closed" value="true" />
+      <created>1700427000411</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700427000411</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adam 1 push" />
     <MESSAGE value="Adam 2 push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adam 2 push" />
+    <MESSAGE value="partie 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="partie 4" />
   </component>
 </project>

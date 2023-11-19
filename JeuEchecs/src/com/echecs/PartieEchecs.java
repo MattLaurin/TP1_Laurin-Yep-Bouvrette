@@ -186,7 +186,7 @@ public class PartieEchecs {
         Position roi2 = null;
         // trouver rois
         for (int i = 0; i < echiquier.length; i++)
-            for (int j = 0; j < echiquier.length; j++)
+            for (int j = 0; j < echiquier[0].length; j++)
                 if (echiquier[i][j] instanceof Roi ) {
                     if (roi1 != null) {
                         roi2 = EchecsUtil.getPosition((byte) j, (byte) i);
@@ -199,7 +199,7 @@ public class PartieEchecs {
                 }
         // trouver piece qui peut se deplacer sur roi
         for (int i = 0; i < echiquier.length; i++)
-            for (int j = 0; j < echiquier.length; j++)
+            for (int j = 0; j < echiquier[0].length; j++)
                 if (echiquier[i][j] != null){
                     if (echiquier[i][j].getCouleur() != couleur1){
                         if (echiquier[i][j].peutSeDeplacer(EchecsUtil.getPosition((byte)j, (byte)i), roi1, echiquier)){

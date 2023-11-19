@@ -112,17 +112,30 @@ public class ServeurChat extends Serveur {
     }
 
     public void commandeJoin(String hote, String invite) {
-
-            if (invitationExistante(hote, invite) != null) {
-                SalonPrive salon = new SalonPrive(hote, invite);
-                salonPrives.add(salon);
-                informerSalon(hote, invite, salon);
-                invitations.remove(invitationExistante(hote, invite));
-            }else{
-                    Invitation newInvitation = new Invitation(hote, invite);
-                    invitations.add(newInvitation);
-                    informerInvitation(hote, invite);
+            if(!hote.equals(invite)){
+                if (invitationExistante(hote, invite) != null && salonExistant(hote,invite) == null) {
+                    SalonPrive salon = new SalonPrive(hote, invite);
+                    salonPrives.add(salon);
+                    informerSalon(hote, invite, salon);
+                    invitations.remove(invitationExistante(hote, invite));
+                }else if(invitationExistante(hote,invite) == null && salonExistant(hote,invite) == null){
+                        Invitation newInvitation = new Invitation(hote, invite);
+                        invitations.add(newInvitation);
+                        informerInvitation(hote, invite);
                 }
+                else if(salonExistant(hote,invite) != null){
+                    for(Connexion cnx : connectes){
+                        if(cnx.getAlias().equals(hote))
+                            cnx.envoyer("Il existe déjà un salon entre " +invite + " et vous ! ");
+                    }
+                }
+            }else {
+                for(Connexion cnx : connectes){
+                    if(cnx.getAlias().equals(hote))
+                        cnx.envoyer("Vous ne pouvez pas vous invitez vous-même ! ");
+                }
+            }
+
     }
 
     public void commandeDecline(String hote, String invite){
@@ -181,14 +194,38 @@ public class ServeurChat extends Serveur {
 
     public void commandeQuit(String alias1, String alias2){
         SalonPrive salon = salonExistant(alias1,alias2);
+        String message = "Il n'y a pas de salon privé avec " + alias2;
 
         if (salon != null){
-
+            salonPrives.remove(salon);
+            informerQuit(alias1,alias2);
+        }
+        else{
+            for(Connexion cnx : connectes){
+                if (cnx.getAlias().equals(alias1)){
+                    cnx.envoyer(message);
+                }
+            }
         }
     }
 
+    public void informerQuit(String alias1, String alias2){
+        String message = alias1 + " A quitter le salon privé avec " + alias2;
+        for(Connexion cnx : connectes){
+            if (cnx.getAlias().equals(alias1)){
+                cnx.envoyer(message);
+            }
+        }
+        for(Connexion cnx : connectes){
+            if (cnx.getAlias().equals(alias2)){
+                cnx.envoyer(message);
+            }
+        }
+    }
+
+
     private void msgPriv(SalonPrive salon, String alias1, String alias2, String msg){
-        String message = String.format("Msg privé : ", alias1, msg);
+        String message = String.format("PRIVÉ %s : %s ", alias1, msg);
 
         for(Connexion cnx : connectes){
             if (cnx.getAlias().equals(alias1) || cnx.getAlias().equals(alias2)){
@@ -244,7 +281,7 @@ public class ServeurChat extends Serveur {
 
     public Invitation invitationExistante(String hote, String invite){
         for(Invitation invitation : invitations)
-            if (invitation.getHote().equals(hote) && invitation.getInvite().equals(invite))
+            if ((invitation.getHote().equals(hote) && invitation.getInvite().equals(invite)) || invitation.getHote().equals(invite) && invitation.getInvite().equals(hote))
                 return invitation;
 
         return null;

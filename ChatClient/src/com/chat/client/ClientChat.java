@@ -9,5 +9,17 @@ package com.chat.client;
  * @since 2023-09-01
  */
 public class ClientChat extends Client {
+
+    private EtatPartieEchecs etatPartieEchecs;
+    public EtatPartieEchecs getEtatPartieEchecs() {
+        return etatPartieEchecs;
+    }
+
+    public void setEtatPartieEchecs(EtatPartieEchecs etatPartieEchecs) {
+        this.etatPartieEchecs = etatPartieEchecs;
+    }
+    public void nouvellePartie(){
+        this.etatPartieEchecs = new EtatPartieEchecs();
+    }
     //Cette classe est pour le moment vide et sera compléter dans le TP.
 }

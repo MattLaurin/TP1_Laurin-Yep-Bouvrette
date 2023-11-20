@@ -6,6 +6,7 @@ import com.chat.commun.net.Connexion;
 import com.echecs.PartieEchecs;
 import com.echecs.Position;
 
+
 /**
  * Cette classe représente un gestionnaire d'événement d'un client. Lorsqu'un client reçoit un texte d'un serveur,
  * il crée un événement à partir du texte reçu et alerte ce gestionnaire qui réagit en gérant l'événement.
@@ -16,6 +17,8 @@ import com.echecs.Position;
  */
 public class GestionnaireEvenementClient implements GestionnaireEvenement {
     private Client client;
+
+    ClientChat client1 = new ClientChat();
 
     /**
      * Construit un gestionnaire d'événements pour un client.
@@ -64,15 +67,13 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     }else if (arg.charAt(0) == 'n'){
                         System.out.println("Vous etes les NOIRS\n");
                     }
-                    ClientChat client = new ClientChat();
-                    client.nouvellePartie();
+                    client1.nouvellePartie();
                     System.out.println("Voici l'echiquier : ");
-                    System.out.println(client.getEtatPartieEchecs().toString());
+                    System.out.println(client1.getEtatPartieEchecs().toString());
                     System.out.println("Quel est votre prochain movement ? (Veuillez respecter la syntaxe suivante : MOVE x#-x# // MOVE x# x# // MOVE x#x# ");
                     break;
                 case "MOVEOK":
                     arg = evenement.getArgument();
-                    ClientChat client1 = new ClientChat();
                     String posInit ="" +  arg.charAt(0) + arg.charAt(1);
                     String posFinale = "" + arg.charAt(arg.length()-2) + arg.charAt(arg.length()-1);
                     //

@@ -93,7 +93,9 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     serveur.commandeChess(alias1,alias2);
                     break;
                 case "MOVE":
-                    msg = evenement.getArgument();
+                    alias1 = cnx.getAlias();
+                    mess = evenement.getArgument().split(" ");
+                    break;
 
                 default: //Renvoyer le texte recu convertit en majuscules :
                     msg = (evenement.getType() + " " + evenement.getArgument()).toUpperCase();

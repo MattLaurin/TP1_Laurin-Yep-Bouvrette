@@ -3,7 +3,7 @@ package com.chat.serveur;
 
 import com.chat.commun.net.Connexion;
 import com.echecs.PartieEchecs;
-
+import com.echecs.Position;
 
 
 import java.sql.Array;
@@ -236,10 +236,39 @@ public class ServeurChat extends Serveur {
                 }
             }
         }
-
-
-
     }
+
+
+    public void commandeMove(String alias1, String posInit, String posFinale) {
+        for (SalonPrive s : salonPrives) {
+            if (s.getHote().equals(alias1)){
+                SalonPrive salon = s;
+                String alias_1 = salon.getHote();
+                String alias_2 = salon.getInvite();
+                PartieEchecs partieJouer = salon.getPartieEchecs();
+
+                //Création des positions :
+                char column = posInit.charAt(0);
+                char ligne = posInit.charAt(1);
+                Position posInitiale = new Position(column,(byte)ligne);
+
+                char column1 = posFinale.charAt(0);
+                char ligne1 = posFinale.charAt(1);
+                Position posFinale1 = new Position(column1,(byte)ligne1);
+
+                if (partieJouer.deplace(posInitiale,posFinale1)){
+                    for(Connexion cnx : connectes){
+                        if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
+                            cnx.envoyer("MOVE"  + posInit + posFinale);
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
 
     public void informerQuit(String alias1, String alias2){
         String message = alias1 + " A quitter le salon privé avec " + alias2;
@@ -257,7 +286,7 @@ public class ServeurChat extends Serveur {
 
 
     private void msgPriv(SalonPrive salon, String alias1, String alias2, String msg){
-        String message = String.format("PRIVÉ %s : %s ", alias1, msg);
+        String message = String.format("PRIVÉ" + alias1 +":" + msg);
 
         for(Connexion cnx : connectes){
             if (cnx.getAlias().equals(alias1) || cnx.getAlias().equals(alias2)){

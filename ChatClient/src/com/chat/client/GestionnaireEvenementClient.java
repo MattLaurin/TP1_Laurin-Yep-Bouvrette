@@ -66,8 +66,11 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     client.nouvellePartie();
                     System.out.println("Voici l'echiquier : ");
                     System.out.println(client.getEtatPartieEchecs().toString());
-                    System.out.println("Quel est votre prochain movement ? ");
+                    System.out.println("Quel est votre prochain movement ? (Veuillez respecter la syntaxe suivante : MOVE x#-x# // MOVE x# x# // MOVE x#x# ");
                     break;
+                case "MOVE":
+                    arg = evenement.getArgument();
+
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }

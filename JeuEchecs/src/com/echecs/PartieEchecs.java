@@ -225,6 +225,24 @@ public class PartieEchecs {
         return enEchec;
         //throw new NotImplementedException();
     }
+    public boolean estMat(){
+
+        char couRoi = estEnEchec();
+        if(couRoi == '.')
+            return false;
+        Position roi1 = null;
+        // trouver rois
+        for (int i = 0; i < echiquier.length; i++)
+            for (int j = 0; j < echiquier[0].length; j++)
+                if (echiquier[i][j] instanceof Roi ) {
+                    if (echiquier[i][j].getCouleur() == couRoi)
+                        roi1 = EchecsUtil.getPosition((byte) j, (byte) i);
+
+
+
+
+
+    }
     /**
      * Retourne la couleur n ou b du joueur qui a la main.
      *

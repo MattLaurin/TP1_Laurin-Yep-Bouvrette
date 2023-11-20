@@ -76,7 +76,6 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     break;
                 case "PRV":
                     String[] mess = evenement.getArgument().split(" ",2); // Marche seulement si l'utilisateur met un espace entre chaque 'element'
-
                     String alias1 = cnx.getAlias();
                     String alias2 = mess[0];
                     msg = mess[1];
@@ -93,7 +92,7 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     serveur.commandeChess(alias1,alias2);
                     break;
                 case "MOVE":
-                    alias1 = cnx.getAlias();
+                    alias1 = cnx.getAlias(); // prend le joueur
                     msg = evenement.getArgument();
                     String posInit ="" +  msg.charAt(0) + msg.charAt(1);
                     String posFinale = "" + msg.charAt(msg.length()-2) + msg.charAt(msg.length()-1);

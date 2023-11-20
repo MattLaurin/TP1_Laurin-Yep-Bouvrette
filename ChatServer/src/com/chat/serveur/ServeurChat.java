@@ -238,7 +238,6 @@ public class ServeurChat extends Serveur {
         }
     }
 
-
     public void commandeMove(String alias1, String posInit, String posFinale) {
         boolean vrai = true;
 
@@ -254,12 +253,9 @@ public class ServeurChat extends Serveur {
                 char ligne = posInit.charAt(1);
                 Position posInitiale = new Position(column,Byte.valueOf(String.valueOf(ligne)));
 
-
-
                 char column1 = posFinale.charAt(0);
                 char ligne1 = posFinale.charAt(1);
                 Position posFinale1 = new Position(column1,Byte.valueOf(String.valueOf(ligne1)));
-
 
                 if (partieJouer.deplace(posInitiale,posFinale1)){           // Il y a une erreur dans cette boucle.
                     for(Connexion cnx : connectes){
@@ -267,6 +263,7 @@ public class ServeurChat extends Serveur {
                             cnx.envoyer("MOVEOK "  + posInitiale +" " + posFinale1);
                         }
                     }
+                    partieJouer.changerTour();
                 }
                 else if(partieJouer.getEnEchec()){
                     for(Connexion cnx : connectes){

@@ -98,34 +98,43 @@ public class PartieEchecs {
      */
     public boolean deplace(Position initiale, Position finale) {
         boolean peutDeplacer = true;
-        if (!EchecsUtil.positionValide(initiale) || !EchecsUtil.positionValide(finale))
+        byte xI = EchecsUtil.indiceColonne(initiale);
+        byte yI = EchecsUtil.indiceLigne(initiale);
+        byte xF = EchecsUtil.indiceColonne(finale);
+        byte yF = EchecsUtil.indiceLigne(finale);
+        if (!EchecsUtil.positionValide(initiale) || !EchecsUtil.positionValide(finale)) {
             return false;
-        if (echiquier[initiale.getColonne()][initiale.getLigne()] == null)
+        }
+        if (echiquier[xI][yI] == null) {
             return false;
-        if (echiquier[initiale.getColonne()][initiale.getLigne()].getCouleur() != getTour())
+        }
+        if (echiquier[xI][yI].getCouleur() != getTour()) {
             return false;
-        if (echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == getTour())
+        }
+        if (echiquier[xF][yF].getCouleur() == getTour()) {
             return false;
-        if (initiale.getColonne() == finale.getColonne() && initiale.getLigne() == finale.getLigne())
+        }
+        if (xI == xF && yI == yF) {
             return false;
+        }
 
-        if (echiquier[initiale.getColonne()][initiale.getLigne()] instanceof Roi && Math.abs(initiale.getColonne() - finale.getColonne()) == 2) { // veut faire un roque
-            int directionRoque = finale.getColonne() - initiale.getColonne();
-            int x = initiale.getColonne();
+        if (echiquier[xI][yI] instanceof Roi && Math.abs(xI - xF) == 2) { // veut faire un roque
+            int directionRoque = xI - xF;
+            int x = xI;
             char enEchec = 0;
             if (getTour() == 'b') {
                 if ((directionRoque == -2 && roqueGaucheBlanc) || (directionRoque == 2 && roqueDroitBlanc) && estEnEchec() != 'b'){
                     directionRoque = directionRoque/2;
                     x += directionRoque;
-                    while (x != finale.getColonne() + directionRoque && echiquier[x][1] == null && enEchec == getTour()) {
-                        echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
-                        echiquier[initiale.getColonne()][initiale.getLigne()] = null;
+                    while (x != xF + directionRoque && echiquier[x][1] == null && enEchec == getTour()) {
+                        echiquier[x][yI] = echiquier[xI][yI];
+                        echiquier[xI][yI] = null;
                         enEchec = estEnEchec();
-                        echiquier[initiale.getColonne()][initiale.getLigne()] = echiquier[x][initiale.getLigne()];
-                        echiquier[x][initiale.getLigne()] = null;
+                        echiquier[xI][yI] = echiquier[x][yI];
+                        echiquier[x][yI] = null;
                         x += directionRoque;
                     }
-                    peutDeplacer = x == finale.getColonne();
+                    peutDeplacer = x == yF;
                 } else
                     return false;
 
@@ -133,38 +142,39 @@ public class PartieEchecs {
                 if ((directionRoque == -2 && roqueGaucheNoir) || (directionRoque == 2 && roqueDroitNoir) && estEnEchec() != 'n'){
                     directionRoque = directionRoque/2;
                     x += directionRoque;
-                    while (x != finale.getColonne() + directionRoque && echiquier[x][8] == null && enEchec == getTour()) {
-                        echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
-                        echiquier[initiale.getColonne()][initiale.getLigne()] = null;
+                    while (x != xF + directionRoque && echiquier[x][1] == null && enEchec == getTour()) {
+                        echiquier[x][yI] = echiquier[xI][yI];
+                        echiquier[xI][yI] = null;
                         enEchec = estEnEchec();
-                        echiquier[initiale.getColonne()][initiale.getLigne()] = echiquier[x][initiale.getLigne()];
-                        echiquier[x][initiale.getLigne()] = null;
+                        echiquier[xI][yI] = echiquier[x][yI];
+                        echiquier[x][yI] = null;
                         x += directionRoque;
                     }
-                    peutDeplacer = x == finale.getColonne();
+                    peutDeplacer = x == yF;
                 } else
                     return false;
             }
         }
 
-        if (peutDeplacer)   // si piece peut se deplace
-            peutDeplacer = echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
+        if (peutDeplacer) {   // si piece peut se deplace
+            peutDeplacer = echiquier[xI][xF].peutSeDeplacer(initiale, finale, echiquier);
+        }
         if (estEnEchec() == getTour()) { //regarde si en echec
             this.enEchec = true;
             peutDeplacer = false;
         }
         if (peutDeplacer) { //fait deplacement
-            this.echiquier[finale.getColonne()][finale.getLigne()] = this.echiquier[initiale.getColonne()][initiale.getLigne()];
-            this.echiquier[initiale.getColonne()][initiale.getLigne()] = null;
+            this.echiquier[xF][yF] = this.echiquier[xI][yI];
+            this.echiquier[xI][yI] = null;
         }
 
-        if (peutDeplacer && this.echiquier[finale.getColonne()][finale.getLigne()] instanceof Pion) //promotion dame
-            if (this.echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == 'b'){
-                if (finale.getLigne() == 7)
-                    this.echiquier[finale.getColonne()][finale.getLigne()] = new Dame('b');
+        if (peutDeplacer && this.echiquier[xF][yF] instanceof Pion) //promotion dame
+            if (this.echiquier[xF][yF].getCouleur() == 'b'){
+                if (yF == 7)
+                    this.echiquier[xF][yF] = new Dame('b');
             } else {
-                if (finale.getLigne() == 0)
-                    this.echiquier[finale.getColonne()][finale.getLigne()] = new Dame('n');
+                if (yF == 0)
+                    this.echiquier[xF][yF] = new Dame('n');
             }
 
         if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace

@@ -272,6 +272,20 @@ public class ServeurChat extends Serveur {
                             partieJouer.plusEnEchec();
                         }
                     }
+                } else if (partieJouer.estMat()) {
+                    for(Connexion cnx : connectes){
+                        if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
+                            char couleur = partieJouer.estEnEchec();
+                            if(partieJouer.getCouleurJoueur1() == couleur)
+                                cnx.envoyer("MAT" + partieJouer.getAliasJoueur1());
+                            else{
+                                cnx.envoyer("MAT" + partieJouer.getAliasJoueur2());
+                            }
+                            salon.setPartieEchecs(null); // Met la partie a null (supprime)
+                            salonPrives.remove(salon); // Supprime le salon;
+                        }
+                    }
+
                 }
 
 

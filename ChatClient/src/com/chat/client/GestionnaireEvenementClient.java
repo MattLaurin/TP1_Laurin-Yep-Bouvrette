@@ -72,7 +72,19 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     break;
                 case "MOVEOK":
                     arg = evenement.getArgument();
+                    ClientChat client1 = new ClientChat();
+                    String posInit ="" +  arg.charAt(0) + arg.charAt(1);
+                    String posFinale = "" + arg.charAt(arg.length()-2) + arg.charAt(arg.length()-1);
+                    //
+                    char column = posInit.charAt(0);
+                    char ligne = posInit.charAt(1);
+                    Position posInitiale = new Position(column,(byte)ligne);
 
+                    char column1 = posFinale.charAt(0);
+                    char ligne1 = posFinale.charAt(1);
+                    Position posFinale1 = new Position(column1,(byte)ligne1);
+                    client1.setEtatPartieEchecs(posInitiale,posFinale1);
+                    System.out.println(client1.getEtatPartieEchecs().toString());
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }

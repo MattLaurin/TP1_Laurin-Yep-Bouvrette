@@ -298,6 +298,7 @@ public class ServeurChat extends Serveur {
 
                 if (fini){
                     salon.setPartieEchecs(null); // Met la partie a null (supprime)
+                    salonPrives.remove(salon); // Supprime le salon;
                 }
             }
         }

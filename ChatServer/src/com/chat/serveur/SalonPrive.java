@@ -28,9 +28,9 @@ public class SalonPrive {
         return hote;
     }
 
- //   public PartieEchecs getPartieEchecs() {
- //       return partieEchecs;
-    //  }
+    public PartieEchecs getPartieEchecs() {
+        return partieEchecs;
+      }
 
- //   public void setPartieEchecs(PartieEchecs partieEchecs) { this.partieEchecs = partieEchecs; }
+public void setPartieEchecs(PartieEchecs partieEchecs) { this.partieEchecs = partieEchecs; }
 }

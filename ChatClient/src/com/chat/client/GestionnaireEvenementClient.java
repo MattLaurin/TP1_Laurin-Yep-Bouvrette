@@ -55,7 +55,8 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     for (String string : msg)
                         System.out.println("\t\t\t"+"."+string);
                     break;
-
+                case "CHESSOK" :
+                    break;
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }

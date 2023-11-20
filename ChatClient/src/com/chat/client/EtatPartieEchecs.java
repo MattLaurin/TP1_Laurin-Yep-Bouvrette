@@ -1,7 +1,5 @@
 package com.chat.client;
 
-import java.util.Arrays;
-
 public class EtatPartieEchecs {
     private char[][] etatEchiquier;
 

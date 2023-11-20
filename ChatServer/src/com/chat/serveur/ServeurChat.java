@@ -1,10 +1,15 @@
 package com.chat.serveur;
 
+
 import com.chat.commun.net.Connexion;
+import com.echecs.PartieEchecs;
+
+
 
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.Random;
 import java.util.Vector;
 
 /**
@@ -210,9 +215,15 @@ public class ServeurChat extends Serveur {
     }
     public void commandeChess(String alias1, String alias2){
         // Pour vérifier s'ils sont dans un salon privé
-        if (salonExistant(alias1,alias2) != null) {
-            SalonPrive salon = salonExistant(alias1, alias2);
+        if(salonExistant(alias1,alias2)!=null){
+            SalonPrive salon = salonExistant(alias1,alias2);
+            salon.setPartieEchecs(new PartieEchecs());
+            salon.getPartieEchecs().setAliasJoueur1(alias1);
+            salon.getPartieEchecs().setAliasJoueur2(alias2);
+
         }
+
+
     }
 
     public void informerQuit(String alias1, String alias2){

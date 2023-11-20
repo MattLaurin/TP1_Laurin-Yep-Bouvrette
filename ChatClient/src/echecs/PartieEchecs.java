@@ -1,6 +1,5 @@
-package com.echecs;
+package echecs;
 
-import com.echecs.pieces.*;
 import com.echecs.util.EchecsUtil;
 
 /**
@@ -145,13 +144,9 @@ public class PartieEchecs {
 
         if (peutDeplacer)   // si piece peut se deplace
             peutDeplacer = echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
-        if (estEnEchec() == getTour()) { //regarde si en echec
+        if (estEnEchec() == getTour()) {
             this.enEchec = true;
             peutDeplacer = false;
-        }
-        if (peutDeplacer) { //fait deplacement
-            this.echiquier[finale.getColonne()][finale.getLigne()] = this.echiquier[initiale.getColonne()][initiale.getLigne()];
-            this.echiquier[initiale.getColonne()][initiale.getLigne()] = null;
         }
 
         if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace

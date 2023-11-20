@@ -1,5 +1,7 @@
 package com.chat.client;
 
+import echecs.Position;
+
 public class EtatPartieEchecs {
     private char[][] etatEchiquier;
 
@@ -30,7 +32,7 @@ public class EtatPartieEchecs {
         }
         for (int i = 2; i < 6; i++)
             for (int j = 0; j < 8; j++)
-                this.etatEchiquier[j][i] = ' ';
+                this.etatEchiquier[j][i] = '.';
     }
 
     @Override
@@ -54,7 +56,8 @@ public class EtatPartieEchecs {
         return etatEchiquier;
     }
 
-    public void setEtatEchiquier(char[][] etatEchiquier) {
-        this.etatEchiquier = etatEchiquier;
+    public void setEtatEchiquier(Position pos1, Position pos2) {
+        this.etatEchiquier[pos2.getColonne()][pos2.getLigne()] = this.etatEchiquier[pos1.getColonne()][pos1.getLigne()];
+        this.etatEchiquier[pos1.getColonne()][pos1.getLigne()] = '.';
     }
 }

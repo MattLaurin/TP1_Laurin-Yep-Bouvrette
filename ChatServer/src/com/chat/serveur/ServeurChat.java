@@ -240,6 +240,8 @@ public class ServeurChat extends Serveur {
 
 
     public void commandeMove(String alias1, String posInit, String posFinale) {
+        boolean vrai = true;
+
         for (SalonPrive s : salonPrives) {
             if (s.getHote().equals(alias1)){
                 SalonPrive salon = s;
@@ -256,10 +258,10 @@ public class ServeurChat extends Serveur {
                 char ligne1 = posFinale.charAt(1);
                 Position posFinale1 = new Position(column1,(byte)ligne1);
 
-                if (partieJouer.deplace(posInitiale,posFinale1)){
+                if (partieJouer.deplace(posInitiale,posFinale1)){           // Il y a une erreur dans cette boucle.
                     for(Connexion cnx : connectes){
                         if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
-                            cnx.envoyer("MOVEOK"  + posInitiale +" " + posFinale1);
+                            cnx.envoyer("MOVEOK "  + posInitiale +" " + posFinale1);
                         }
                     }
                 }
@@ -267,6 +269,7 @@ public class ServeurChat extends Serveur {
                     for(Connexion cnx : connectes){
                         if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
                             cnx.envoyer("ECHEC" + "alias_en_echec");
+                            partieJouer.plusEnEchec();
                         }
                     }
                 }
@@ -284,11 +287,11 @@ public class ServeurChat extends Serveur {
 
                 for (Connexion cnx : connectes){
                     if(cnx.getAlias().equals(salon.getHote())){
-                        cnx.envoyer(alias1 + "a abandonné la partie." +"\n");
+                        cnx.envoyer(alias1 + " a abandonné la partie." +"\n");
                         fini = true;
                     }
                     else if(cnx.getAlias().equals(salon.getInvite())){
-                        cnx.envoyer(salon.getInvite() + "a abandonné la partie." +"\n");
+                        cnx.envoyer(salon.getInvite() + " a abandonné la partie." +"\n");
                         fini = true;
                     }
                     else{

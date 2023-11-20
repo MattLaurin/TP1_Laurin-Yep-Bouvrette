@@ -215,13 +215,29 @@ public class ServeurChat extends Serveur {
     }
     public void commandeChess(String alias1, String alias2){
         // Pour vérifier s'ils sont dans un salon privé
+        Boolean estEntrainJouer = false;
+
         if(salonExistant(alias1,alias2)!=null){
+            estEntrainJouer = true;
             SalonPrive salon = salonExistant(alias1,alias2);
             salon.setPartieEchecs(new PartieEchecs());
             salon.getPartieEchecs().setAliasJoueur1(alias1);
             salon.getPartieEchecs().setAliasJoueur2(alias2);
+            salon.getPartieEchecs().setCouleur();
+
+            for(Connexion cnx : connectes){
+                if (cnx.getAlias().equals(alias2)){
+                    cnx.envoyer("CHESSOK"+ salon.getPartieEchecs().getCouleurJoueur2());
+                }
+            }
+            for(Connexion cnx : connectes){
+                if (cnx.getAlias().equals(alias1)){
+                    cnx.envoyer("CHESSOK"+ salon.getPartieEchecs().getCouleurJoueur1());
+                }
+            }
 
         }
+
 
 
     }

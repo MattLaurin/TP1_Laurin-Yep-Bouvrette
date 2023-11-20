@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="fix du com.">
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Fix possible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/SalonPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/SalonPrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/SalonPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/SalonPrive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/ServeurChat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/ServeurChat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/PartieEchecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JeuEchecs/com/echecs/PartieEchecs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700437474849</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix possible">
+      <option name="closed" value="true" />
+      <created>1700441548267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700441548267</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +157,7 @@
     <MESSAGE value="Adam 2 push" />
     <MESSAGE value="partie 4" />
     <MESSAGE value="fix du com." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix du com." />
+    <MESSAGE value="Fix possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix possible" />
   </component>
 </project>

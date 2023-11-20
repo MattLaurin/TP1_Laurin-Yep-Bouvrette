@@ -264,4 +264,17 @@ public class PartieEchecs {
     public char getCouleurJoueur2() {
         return couleurJoueur2;
     }
+
+    //donne des couleur alleatoire aux joueurs
+    public void setCouleur(){
+        int couleur = Math.round((float) Math.random());
+        if (couleur == 0){
+            this.couleurJoueur1 = 'n';
+            this.couleurJoueur2 = 'b';
+        } else {
+            this.couleurJoueur1 = 'b';
+            this.couleurJoueur2 = 'n';
+        }
+    }
+
 }

@@ -26,6 +26,8 @@ public class PartieEchecs {
     private boolean roqueDroitNoir = true;
     private boolean roqueGaucheNoir = true;
 
+    private boolean enEchec = false;
+
     /**
      * La couleur de celui à qui c'est le tour de jouer (n ou b).
      */
@@ -143,8 +145,10 @@ public class PartieEchecs {
 
         if (peutDeplacer)   // si piece peut se deplace
             peutDeplacer = echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
-        if (estEnEchec() == getTour())
+        if (estEnEchec() == getTour()) {
+            this.enEchec = true;
             peutDeplacer = false;
+        }
 
         if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace
             this.roqueGaucheBlanc = false;
@@ -278,6 +282,14 @@ public class PartieEchecs {
             this.couleurJoueur1 = 'b';
             this.couleurJoueur2 = 'n';
         }
+    }
+
+    //retourne si en echec
+    public Boolean getEnEchec(){
+        return this.enEchec;
+    }
+    public void plusEnEchec(){
+        this.enEchec = false;
     }
 
 }

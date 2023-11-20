@@ -1,6 +1,7 @@
 package com.chat.client;
 
-import echecs.Position;
+import com.echecs.PartieEchecs;
+import com.echecs.Position;
 
 public class EtatPartieEchecs {
     private char[][] etatEchiquier;

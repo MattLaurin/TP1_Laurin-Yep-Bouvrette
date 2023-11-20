@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout des couleurs et de la partie Chess">
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout des en echec">
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/PartieEchecs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Cavalier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Dame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Fou.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Piece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Pion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Roi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/pieces/Tour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/programme/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatClient/src/echecs/util/EchecsUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/ClientChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/ClientChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/src/com/chat/client/EtatPartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient/com/chat/client/GestionnaireEvenementClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient/com/chat/client/GestionnaireEvenementClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/GestionnaireEvenementServeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/chat/serveur/GestionnaireEvenementServeur.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -34,20 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matthieu/Desktop/TP---TEST-Laurin/ChatServer/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/adamy/IdeaProjects/TP1_Laurin-Yep-Bouvrette/ChatClient/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamy\IdeaProjects\TP1_Laurin-Yep-Bouvrette\ChatClient\src" />
       <recent name="C:\Users\Matthieu\Desktop\TP---TEST-Laurin\ChatServer\src" />
     </key>
   </component>
@@ -140,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700442375933</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout des en echec">
+      <option name="closed" value="true" />
+      <created>1700448995136</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700448995136</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +190,7 @@
     <MESSAGE value="fix du com." />
     <MESSAGE value="Fix possible" />
     <MESSAGE value="Ajout des couleurs et de la partie Chess" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des couleurs et de la partie Chess" />
+    <MESSAGE value="Ajout des en echec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des en echec" />
   </component>
 </project>

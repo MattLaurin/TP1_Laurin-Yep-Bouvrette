@@ -145,9 +145,13 @@ public class PartieEchecs {
 
         if (peutDeplacer)   // si piece peut se deplace
             peutDeplacer = echiquier[initiale.getColonne()][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
-        if (estEnEchec() == getTour()) {
+        if (estEnEchec() == getTour()) { //regarde si en echec
             this.enEchec = true;
             peutDeplacer = false;
+        }
+        if (peutDeplacer) { //fait deplacement
+            this.echiquier[finale.getColonne()][finale.getLigne()] = this.echiquier[initiale.getColonne()][initiale.getLigne()];
+            this.echiquier[initiale.getColonne()][initiale.getLigne()] = null;
         }
 
         if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace

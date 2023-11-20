@@ -227,15 +227,14 @@ public class ServeurChat extends Serveur {
 
             for(Connexion cnx : connectes){
                 if (cnx.getAlias().equals(alias2)){
-                    cnx.envoyer("CHESSOK"+ salon.getPartieEchecs().getCouleurJoueur2());
+                    cnx.envoyer("CHESSOK "+ salon.getPartieEchecs().getCouleurJoueur2());
                 }
             }
             for(Connexion cnx : connectes){
                 if (cnx.getAlias().equals(alias1)){
-                    cnx.envoyer("CHESSOK"+ salon.getPartieEchecs().getCouleurJoueur1());
+                    cnx.envoyer("CHESSOK "+ salon.getPartieEchecs().getCouleurJoueur1());
                 }
             }
-
         }
 
 

@@ -30,6 +30,9 @@ public class PartieEchecs {
      * La couleur de celui à qui c'est le tour de jouer (n ou b).
      */
     private char tour = 'b'; //Les blancs commencent toujours
+
+
+
     /**
      * Crée un échiquier de jeu d'échecs avec les pièces dans leurs positions
      * initiales de début de partie.

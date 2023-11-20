@@ -56,6 +56,17 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                         System.out.println("\t\t\t"+"."+string);
                     break;
                 case "CHESSOK" :
+                    arg = evenement.getArgument();
+                    if (arg.charAt(0) == 'b'){
+                        System.out.println("Vous etes les blancs\n");
+                    }else if (arg.charAt(0) == 'n'){
+                        System.out.println("Vous etes les NOIRS\n");
+                    }
+                    ClientChat client = new ClientChat();
+                    client.nouvellePartie();
+                    System.out.println("Voici l'echiquier : ");
+                    System.out.println(client.getEtatPartieEchecs().toString());
+                    System.out.println("Quel est votre prochain movement ? ");
                     break;
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());

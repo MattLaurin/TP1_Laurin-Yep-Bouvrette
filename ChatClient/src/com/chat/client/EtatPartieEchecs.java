@@ -23,10 +23,10 @@ public class EtatPartieEchecs {
         this.etatEchiquier[3][0] = 'd';
         this.etatEchiquier[4][0] = 'r';
         for(int i=0; i <= 7;++i){
-            this.etatEchiquier[i][1] = 'P';
+            this.etatEchiquier[i][6] = 'P';
         }
         for(int i=0; i <= 7;++i){
-            this.etatEchiquier[i][6] = 'p';
+            this.etatEchiquier[i][1] = 'p';
         }
         for (int i = 2; i < 6; i++)
             for (int j = 0; j < 8; j++)
@@ -35,7 +35,7 @@ public class EtatPartieEchecs {
 
     @Override
     public String toString() {
-        String affichage = null;
+        String affichage = "\n";
 
         for (int i = 0; i < 8; i++) {
             affichage += i + 1 + " ";
@@ -45,7 +45,7 @@ public class EtatPartieEchecs {
         }
         affichage += "  ";
         for (int j = 0; j < 8; j++) {
-            affichage += 'a'+ j + " ";
+            affichage += (char)('a'+ j) + " ";
         }
         return affichage;
     }

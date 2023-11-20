@@ -259,7 +259,14 @@ public class ServeurChat extends Serveur {
                 if (partieJouer.deplace(posInitiale,posFinale1)){
                     for(Connexion cnx : connectes){
                         if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
-                            cnx.envoyer("MOVE"  + posInit + posFinale);
+                            cnx.envoyer("MOVEOK"  + posInitiale +" " + posFinale1);
+                        }
+                    }
+                }
+                else if(partieJouer.getEnEchec()){
+                    for(Connexion cnx : connectes){
+                        if (cnx.getAlias().equals(alias_1) || cnx.getAlias().equals(alias_2) ){
+                            cnx.envoyer("ECHEC" + "alias_en_echec");
                         }
                     }
                 }
@@ -269,6 +276,32 @@ public class ServeurChat extends Serveur {
         }
     }
 
+    public void commandeAbandon(String alias1){
+        for (SalonPrive s : salonPrives){
+            if (s.getHote().equals(alias1)){
+                SalonPrive salon = s;
+                boolean fini = false;
+
+                for (Connexion cnx : connectes){
+                    if(cnx.getAlias().equals(salon.getHote())){
+                        cnx.envoyer(alias1 + "a abandonné la partie." +"\n");
+                        fini = true;
+                    }
+                    else if(cnx.getAlias().equals(salon.getInvite())){
+                        cnx.envoyer(salon.getInvite() + "a abandonné la partie." +"\n");
+                        fini = true;
+                    }
+                    else{
+                        fini = false;
+                    }
+                }
+
+                if (fini){
+                    salon.setPartieEchecs(null); // Met la partie a null (supprime)
+                }
+            }
+        }
+    }
 
     public void informerQuit(String alias1, String alias2){
         String message = alias1 + " A quitter le salon privé avec " + alias2;

@@ -94,9 +94,15 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     break;
                 case "MOVE":
                     alias1 = cnx.getAlias();
-                    mess = evenement.getArgument().split(" ");
+                    msg = evenement.getArgument();
+                    String posInit ="" +  msg.charAt(0) + msg.charAt(1);
+                    String posFinale = "" + msg.charAt(msg.length()-2) + msg.charAt(msg.length()-1);
+                    serveur.commandeMove(alias1,posInit,posFinale);
                     break;
-
+                case "ABANDON":
+                    alias1 = cnx.getAlias();
+                    serveur.commandeAbandon(alias1);
+                    break;
                 default: //Renvoyer le texte recu convertit en majuscules :
                     msg = (evenement.getType() + " " + evenement.getArgument()).toUpperCase();
                     cnx.envoyer(msg);

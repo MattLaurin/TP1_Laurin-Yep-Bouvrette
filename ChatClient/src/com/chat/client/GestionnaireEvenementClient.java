@@ -3,6 +3,8 @@ package com.chat.client;
 import com.chat.commun.evenement.Evenement;
 import com.chat.commun.evenement.GestionnaireEvenement;
 import com.chat.commun.net.Connexion;
+import com.echecs.PartieEchecs;
+import com.echecs.Position;
 
 /**
  * Cette classe représente un gestionnaire d'événement d'un client. Lorsqu'un client reçoit un texte d'un serveur,
@@ -68,7 +70,7 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     System.out.println(client.getEtatPartieEchecs().toString());
                     System.out.println("Quel est votre prochain movement ? (Veuillez respecter la syntaxe suivante : MOVE x#-x# // MOVE x# x# // MOVE x#x# ");
                     break;
-                case "MOVE":
+                case "MOVEOK":
                     arg = evenement.getArgument();
 
                 default: //Afficher le texte recu :

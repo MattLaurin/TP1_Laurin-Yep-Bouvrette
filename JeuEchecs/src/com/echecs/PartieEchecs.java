@@ -114,12 +114,14 @@ public class PartieEchecs {
             int x = initiale.getColonne();
             char enEchec = 0;
             if (getTour() == 'b') {
-                if ((directionRoque == -2 && roqueGaucheBlanc) || (directionRoque == 2 && roqueDroitBlanc)){
+                if ((directionRoque == -2 && roqueGaucheBlanc) || (directionRoque == 2 && roqueDroitBlanc) && estEnEchec() != 'b'){
                     directionRoque = directionRoque/2;
                     x += directionRoque;
                     while (x != finale.getColonne() + directionRoque && echiquier[x][1] == null && enEchec == getTour()) {
                         echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
+                        echiquier[initiale.getColonne()][initiale.getLigne()] = null;
                         enEchec = estEnEchec();
+                        echiquier[initiale.getColonne()][initiale.getLigne()] = echiquier[x][initiale.getLigne()];
                         echiquier[x][initiale.getLigne()] = null;
                         x += directionRoque;
                     }
@@ -128,12 +130,14 @@ public class PartieEchecs {
                     return false;
 
             } else {
-                if ((directionRoque == -2 && roqueGaucheNoir) || (directionRoque == 2 && roqueDroitNoir)){
+                if ((directionRoque == -2 && roqueGaucheNoir) || (directionRoque == 2 && roqueDroitNoir) && estEnEchec() != 'n'){
                     directionRoque = directionRoque/2;
                     x += directionRoque;
                     while (x != finale.getColonne() + directionRoque && echiquier[x][8] == null && enEchec == getTour()) {
                         echiquier[x][initiale.getLigne()] = echiquier[initiale.getColonne()][initiale.getLigne()];
+                        echiquier[initiale.getColonne()][initiale.getLigne()] = null;
                         enEchec = estEnEchec();
+                        echiquier[initiale.getColonne()][initiale.getLigne()] = echiquier[x][initiale.getLigne()];
                         echiquier[x][initiale.getLigne()] = null;
                         x += directionRoque;
                     }
@@ -153,6 +157,15 @@ public class PartieEchecs {
             this.echiquier[finale.getColonne()][finale.getLigne()] = this.echiquier[initiale.getColonne()][initiale.getLigne()];
             this.echiquier[initiale.getColonne()][initiale.getLigne()] = null;
         }
+
+        if (peutDeplacer && this.echiquier[finale.getColonne()][finale.getLigne()] instanceof Pion) //promotion dame
+            if (this.echiquier[finale.getColonne()][finale.getLigne()].getCouleur() == 'b'){
+                if (finale.getLigne() == 7)
+                    this.echiquier[finale.getColonne()][finale.getLigne()] = new Dame('b');
+            } else {
+                if (finale.getLigne() == 0)
+                    this.echiquier[finale.getColonne()][finale.getLigne()] = new Dame('n');
+            }
 
         if (initiale.getColonne() == 'a' && initiale.getLigne() == 1 && peutDeplacer && roqueGaucheBlanc)   // tour deja deplace
             this.roqueGaucheBlanc = false;
@@ -228,6 +241,8 @@ public class PartieEchecs {
     public boolean estMat(){
 
         char couRoi = estEnEchec();
+        boolean estMat = true;
+        char enEchec;
         if(couRoi == '.')
             return false;
         Position roi1 = null;
@@ -237,11 +252,22 @@ public class PartieEchecs {
                 if (echiquier[i][j] instanceof Roi ) {
                     if (echiquier[i][j].getCouleur() == couRoi)
                         roi1 = EchecsUtil.getPosition((byte) j, (byte) i);
-
-
-
-
-
+                }
+        Position posVoisine;
+        for (int i = -1; i < 2; i++)
+            for (int j = -1; j < 2; j++){
+                posVoisine = new Position((char) (roi1.getColonne() + i), (byte)(roi1.getLigne() + j));
+                if (EchecsUtil.positionValide(posVoisine) && echiquier[posVoisine.getColonne()][posVoisine.getLigne()].getCouleur() != couRoi){
+                    echiquier[posVoisine.getColonne()][posVoisine.getLigne()] = echiquier[roi1.getColonne()][roi1.getLigne()];
+                    echiquier[roi1.getColonne()][roi1.getLigne()] = null;
+                    enEchec = estEnEchec();
+                    echiquier[roi1.getColonne()][roi1.getLigne()] = echiquier[posVoisine.getColonne()][posVoisine.getLigne()];
+                    echiquier[posVoisine.getColonne()][posVoisine.getLigne()] = null;
+                    if (enEchec != couRoi)
+                        return false;
+                }
+            }
+        return estMat;
     }
     /**
      * Retourne la couleur n ou b du joueur qui a la main.

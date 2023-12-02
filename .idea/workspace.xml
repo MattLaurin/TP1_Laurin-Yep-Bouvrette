@@ -4,69 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/programme/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/programme/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurListeConnectes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurListeConnectes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurMenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/ServiceImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/ServiceImages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/ChatServer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/Evenement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/EvenementUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/GestionnaireEvenement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/net/Connexion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/thread/Lecteur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/thread/ThreadEcouteurDeTexte.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/programme/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/GestionnaireEvenementServeur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Invitation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/SalonPrive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Serveur$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Serveur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/ServeurChat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/ThreadEcouteurDeConnexions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/PartieEchecs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Cavalier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Dame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Fou.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Piece.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Pion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Roi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Tour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/util/EchecsUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/Evenement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/EvenementUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/GestionnaireEvenement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/net/Connexion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/thread/Lecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/programme/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Invitation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/SalonPrive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Serveur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/ServeurChat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/ThreadEcouteurDeConnexions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/PartieEchecs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Cavalier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Dame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Fou.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Piece.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Pion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Roi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Tour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/util/EchecsUtil.java" beforeDir="false" />
-    </list>
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +136,39 @@
       <option name="project" value="LOCAL" />
       <updated>1701477759001</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajout TP2">
+      <option name="closed" value="true" />
+      <created>1701479146131</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701479146131</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ajout TP2">
+      <option name="closed" value="true" />
+      <created>1701479159874</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701479159874</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ajout TP2">
+      <option name="closed" value="true" />
+      <created>1701479264204</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701479264204</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ajout TP2">
+      <option name="closed" value="true" />
+      <created>1701479272771</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701479272771</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

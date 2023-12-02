@@ -4,11 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="ajout mat après qu'il ai été implenté">
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/programme/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/programme/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurListeConnectes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurListeConnectes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurMenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/ServiceImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/ServiceImages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/ChatServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/Evenement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/EvenementUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/evenement/GestionnaireEvenement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/net/Connexion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/thread/Lecteur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/commun/thread/ThreadEcouteurDeTexte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/programme/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/GestionnaireEvenementServeur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Invitation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/SalonPrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Serveur$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/Serveur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/ServeurChat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/chat/serveur/ThreadEcouteurDeConnexions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/PartieEchecs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Cavalier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Dame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Fou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Pion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Roi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/pieces/Tour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/out/production/ChatServer/com/echecs/util/EchecsUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/Evenement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/EvenementUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/evenement/GestionnaireEvenement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/net/Connexion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/thread/Lecteur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/programme/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Invitation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/SalonPrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/Serveur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/ServeurChat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/ThreadEcouteurDeConnexions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/PartieEchecs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Cavalier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Dame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Fou.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Pion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Roi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/pieces/Tour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/echecs/util/EchecsUtil.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,38 +108,6 @@
       <recent name="C:\Users\adamy\IdeaProjects\TP1_Laurin-Yep-Bouvrette\ChatClient\src" />
       <recent name="C:\Users\Matthieu\Desktop\TP---TEST-Laurin\ChatServer\src" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.MainChat">
-    <configuration name="MainChat" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="com.chat.programme.Main" />
-      <module name="ChatClient" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainServer" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="com.chat.programme.Main" />
-      <module name="ChatServer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.MainChat" />
-      <item itemvalue="Application.MainServer" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -165,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700460626537</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ajout TP2">
+      <option name="closed" value="true" />
+      <created>1701477759001</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701477759001</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +228,7 @@
     <MESSAGE value="Ajout des en echec" />
     <MESSAGE value="Fix de move encore 2" />
     <MESSAGE value="ajout mat après qu'il ai été implenté" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout mat après qu'il ai été implenté" />
+    <MESSAGE value="Ajout TP2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout TP2" />
   </component>
 </project>

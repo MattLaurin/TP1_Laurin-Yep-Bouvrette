@@ -4,201 +4,99 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2" />
+    <list default="true" id="0c5ac91f-1598-4ef2-aa08-037e8ebe7bf8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/TP1_Laurin-Yep-Bouvrette.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TP---TEST-Laurin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient/ChatClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/ChatClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChatPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChatPrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/ChatServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/ChatServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/client/GestionnaireEvenementClient2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/client/GestionnaireEvenementClient2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/programme/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/programme/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurMenuPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurMenuPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauInvitations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauInvitations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/GestionnaireEvenementServeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/GestionnaireEvenementServeur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/Serveur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/Serveur.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2Y2vReEGBH0woSKfLTDHegLtFdt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2Z38vXLX5dIfiGyCEDL5YgAmrrM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamy/IdeaProjects/TP1_Laurin-Yep-Bouvrette/ChatClient/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/louis/Documents/Projets/TP1_Laurin-Yep-Bouvrette",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adamy\IdeaProjects\TP1_Laurin-Yep-Bouvrette\ChatClient\src" />
-      <recent name="C:\Users\Matthieu\Desktop\TP---TEST-Laurin\ChatServer\src" />
-    </key>
+}]]></component>
+  <component name="RunManager" selected="Application.MainFrame">
+    <configuration name="Main" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chat.programme.Main" />
+      <module name="ChatServer2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainFrame" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chat.programme.MainFrame" />
+      <module name="ChatClient2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="" />
-      <created>1699736481846</created>
+      <changelist id="0c5ac91f-1598-4ef2-aa08-037e8ebe7bf8" name="Changes" comment="" />
+      <created>1701639635149</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699736481846</updated>
+      <updated>1701639635149</updated>
+      <workItem from="1701639636293" duration="2675000" />
     </task>
-    <task id="LOCAL-00001" summary="Adam 1 push">
-      <option name="closed" value="true" />
-      <created>1700233217134</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1700233217134</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Adam 2 push">
-      <option name="closed" value="true" />
-      <created>1700259016011</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1700259016012</updated>
-    </task>
-    <task id="LOCAL-00003" summary="partie 4">
-      <option name="closed" value="true" />
-      <created>1700427000411</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1700427000411</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix du com.">
-      <option name="closed" value="true" />
-      <created>1700437474849</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1700437474849</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fix possible">
-      <option name="closed" value="true" />
-      <created>1700441548267</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1700441548267</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Ajout des couleurs et de la partie Chess">
-      <option name="closed" value="true" />
-      <created>1700442375933</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1700442375933</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Ajout des en echec">
-      <option name="closed" value="true" />
-      <created>1700448995136</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1700448995136</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fix de move encore 2">
-      <option name="closed" value="true" />
-      <created>1700459982835</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1700459982835</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ajout mat après qu'il ai été implenté">
-      <option name="closed" value="true" />
-      <created>1700460626537</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1700460626537</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Ajout TP2">
-      <option name="closed" value="true" />
-      <created>1701477759001</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701477759001</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Ajout TP2">
-      <option name="closed" value="true" />
-      <created>1701479146131</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1701479146131</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Ajout TP2">
-      <option name="closed" value="true" />
-      <created>1701479159874</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1701479159874</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Ajout TP2">
-      <option name="closed" value="true" />
-      <created>1701479264204</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1701479264204</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Ajout TP2">
-      <option name="closed" value="true" />
-      <created>1701479272771</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1701479272771</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="false" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adam 1 push" />
-    <MESSAGE value="Adam 2 push" />
-    <MESSAGE value="partie 4" />
-    <MESSAGE value="fix du com." />
-    <MESSAGE value="Fix possible" />
-    <MESSAGE value="Ajout des couleurs et de la partie Chess" />
-    <MESSAGE value="Ajout des en echec" />
-    <MESSAGE value="Fix de move encore 2" />
-    <MESSAGE value="ajout mat après qu'il ai été implenté" />
-    <MESSAGE value="Ajout TP2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout TP2" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

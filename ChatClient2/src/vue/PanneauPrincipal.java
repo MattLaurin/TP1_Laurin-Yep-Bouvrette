@@ -3,6 +3,7 @@ package vue;
 import com.chat.client.ClientChat;
 import controleur.EcouteurChatPrive;
 import controleur.EcouteurChatPublic;
+import controleur.EcouteurEvenementsAction;
 import controleur.EcouteurListeConnectes;
 
 import javax.swing.*;
@@ -35,7 +36,12 @@ public class PanneauPrincipal  extends JPanel {
         EcouteurChatPublic ecouteurChatPublic = new EcouteurChatPublic(clientChat, panneauChatPublic);
         panneauChatPublic.setEcouteur(ecouteurChatPublic);
 
+
+
         panneauInvitations = new PanneauInvitations();
+        EcouteurEvenementsAction ecouteurEvenementsAction = new EcouteurEvenementsAction(clientChat,panneauInvitations);
+
+        panneauInvitations.setEcouteur(ecouteurEvenementsAction);
 
         panneauxPrives = new HashMap<>();
 

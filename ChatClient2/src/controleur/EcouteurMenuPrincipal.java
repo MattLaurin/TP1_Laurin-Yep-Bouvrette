@@ -1,6 +1,7 @@
 package controleur;
 
 import com.chat.client.ClientChat;
+import vue.PanneauConfigServeur;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -49,7 +50,24 @@ public class EcouteurMenuPrincipal implements ActionListener {
                     }
                     break;
                 case "CONFIGURER":
-                    //TODO : compléter (question 1.3)
+                    PanneauConfigServeur pcs = new PanneauConfigServeur(clientChat.getAdrServeur(),clientChat.getPortServeur());
+                    recommencer = true;
+                    do {
+                        res = JOptionPane.showConfirmDialog(fenetre, pcs, "Configuration serveur", JOptionPane.OK_CANCEL_OPTION);
+                        if (res == JOptionPane.OK_OPTION) {
+                            clientChat.setAdrServeur(pcs.getAdresseServeur());
+                            try {
+                                int port = Integer.parseInt(pcs.getPortServeur());
+                                clientChat.setPortServeur(port);
+                                recommencer=false;
+                            } catch (NumberFormatException exp) {
+                                JOptionPane.showMessageDialog(fenetre, "Le port ("
+                                        + pcs.getPortServeur() + ") doit être entier");
+                            }
+                        }
+                        else
+                            recommencer=false;
+                    }while (recommencer);
                     break;
                 case "QUITTER":
                     if (clientChat.isConnecte()) {

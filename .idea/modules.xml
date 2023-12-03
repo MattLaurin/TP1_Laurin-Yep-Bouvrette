@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ChatClient/ChatClient.iml" filepath="$PROJECT_DIR$/ChatClient/ChatClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChatClient2/ChatClient2.iml" filepath="$PROJECT_DIR$/ChatClient2/ChatClient2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChatServer/ChatServer.iml" filepath="$PROJECT_DIR$/ChatServer/ChatServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChatServer2/ChatServer2.iml" filepath="$PROJECT_DIR$/ChatServer2/ChatServer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/JeuEchecs/JeuEchecs.iml" filepath="$PROJECT_DIR$/JeuEchecs/JeuEchecs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TP---TEST-Laurin.iml" filepath="$PROJECT_DIR$/.idea/TP---TEST-Laurin.iml" />
     </modules>

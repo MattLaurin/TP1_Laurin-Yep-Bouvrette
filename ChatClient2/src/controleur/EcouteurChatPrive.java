@@ -3,6 +3,8 @@ package controleur;
 import com.chat.client.ClientChat;
 import vue.PanneauChat;
 
+import java.awt.event.ActionEvent;
+
 /**
  *
  * @author Abdelmoumène Toudeft (Abdelmoumene.Toudeft@etsmtl.ca)
@@ -16,5 +18,8 @@ public class EcouteurChatPrive extends EcouteurChatPublic {
         this.alias = alias;
     }
     //à compléter (redéfinir la méthode actionPerformed())
+    public void actionPerformed(ActionEvent evt){
+
+    }
 
 }

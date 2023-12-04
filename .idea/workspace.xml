@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPrive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChatPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChatPrive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurChatPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurChatPrive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/ChatClient2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/ChatClient2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +236,8 @@
     <MESSAGE value="Fix de move encore 2" />
     <MESSAGE value="ajout mat après qu'il ai été implenté" />
     <MESSAGE value="Ajout TP2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout TP2" />
+    <MESSAGE value="l" />
+    <option name="LAST_COMMIT_MESSAGE" value="l" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

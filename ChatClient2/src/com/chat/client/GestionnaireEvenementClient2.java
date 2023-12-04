@@ -5,6 +5,7 @@ import com.chat.commun.evenement.GestionnaireEvenement;
 import com.chat.commun.net.Connexion;
 import com.chat.echecs.EtatPartieEchecs;
 import com.chat.programme.MainFrame;
+import controleur.EcouteurJeuEchecs;
 import vue.FenetreEchecs;
 import vue.PanneauEchiquier;
 import vue.PanneauPrincipal;
@@ -143,7 +144,7 @@ public class GestionnaireEvenementClient2 implements GestionnaireEvenement {
                     alias = evenement.getArgument();
                     panneauPrincipal.annuleInviteEchecs(alias);
                     break;
-                case "CHESSOK":
+                case "CHESSOK": //completer reste a tester
                     arg = evenement.getArgument();
                     str = arg.substring(arg.indexOf(" ")+1);
                     arg = arg.substring(0,arg.indexOf(" "));
@@ -152,7 +153,8 @@ public class GestionnaireEvenementClient2 implements GestionnaireEvenement {
                     System.out.println(client.getEtatPartieEchecs());
                     PanneauEchiquier panneauEchiquier = new PanneauEchiquier(client.getEtatPartieEchecs());
                     //à compléter
-
+                    panneauEchiquier.setEcouteurJeuEchecs(new EcouteurJeuEchecs(this.client));
+                    fenetreEchecs = new FenetreEchecs(panneauEchiquier, "Vous (" + str + ") contre" + arg);
                     panneauPrincipal.setFenetreEchecs(arg,fenetreEchecs);
                     break;
                 case "INVALID":

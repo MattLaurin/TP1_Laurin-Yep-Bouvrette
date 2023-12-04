@@ -1,12 +1,16 @@
 package com.chat.echecs;
 
+import observer.Observable;
+import com.echecs.Position;
+import com.echecs.util.EchecsUtil;
+
 /**
  *
  * @author Abdelmoumène Toudeft (Abdelmoumene.Toudeft@etsmtl.ca)
  * @version 1.0
  * @since 2023-10-01
  */
-public class EtatPartieEchecs {
+public class EtatPartieEchecs extends Observable {
     private char[][] etatEchiquier = new char[8][8];
     public EtatPartieEchecs() {
         //Les pions :
@@ -16,9 +20,9 @@ public class EtatPartieEchecs {
         }
         //Cases vide :
         for (int j=0;j<8;j++)
-          for (int i=2;i<6;i++) {
-            etatEchiquier[i][j] = ' ';
-        }
+            for (int i=2;i<6;i++) {
+                etatEchiquier[i][j] = ' ';
+            }
 
         //Tours :
         etatEchiquier[0][0] = 't';
@@ -46,10 +50,33 @@ public class EtatPartieEchecs {
         etatEchiquier[0][4] = 'r';
         etatEchiquier[7][4] = 'R';
     }
-    public boolean move(String deplacement) {
+    public boolean move(String deplacement) {   // completer reste a tester
         boolean res = false;
-        //à compléter
+        if (deplacement.charAt(2) == '-' && deplacement.length() == 5 || deplacement.charAt(2) == ' ' && deplacement.length() == 5
+                || deplacement.length() == 4){
+            char column = deplacement.charAt(0);
+            byte ligne = (byte)Character.getNumericValue(deplacement.charAt(1));
+            Position posInitiale = new Position(column, ligne);
 
+            column = deplacement.charAt(deplacement.length() - 2);
+            ligne = (byte)Character.getNumericValue(deplacement.charAt(deplacement.length() - 1));
+            Position posFinale = new Position(column, ligne);
+
+            if(posInitiale.getColonne() >= 'a' || posInitiale.getColonne() <= 'h' || posInitiale.getLigne() >= 1 || posInitiale.getLigne() <= 8 ||
+                    posFinale.getColonne() >= 'a' || posFinale.getColonne() <= 'h' || posFinale.getLigne() >= 1 || posFinale.getLigne() <= 8) {
+                res = true;
+                byte ligneFinale = EchecsUtil.indiceLigne(posFinale);
+                byte colonneFinale = EchecsUtil.indiceColonne(posFinale);
+                etatEchiquier[ligneFinale][colonneFinale] =
+                        etatEchiquier[EchecsUtil.indiceLigne(posInitiale)][EchecsUtil.indiceColonne(posInitiale)];
+                etatEchiquier[EchecsUtil.indiceLigne(posInitiale)][EchecsUtil.indiceColonne(posInitiale)] = ' ';
+
+                if (etatEchiquier[ligneFinale][colonneFinale] == 'p' && ligneFinale == 7)
+                    etatEchiquier[ligneFinale][colonneFinale] = 'r';
+                if (etatEchiquier[ligneFinale][colonneFinale] == 'P' && ligneFinale == 0)
+                    etatEchiquier[ligneFinale][colonneFinale] = 'R';
+            }
+        }
         return res;
     }
 

@@ -2,6 +2,8 @@ package vue;
 
 import com.chat.echecs.EtatPartieEchecs;
 import controleur.EcouteurJeuEchecs;
+import observer.Observable;
+import observer.Observateur;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +15,7 @@ import java.awt.event.ActionListener;
  * @version 1.0
  * @since 2023-10-01
  */
-public class PanneauEchiquier extends JPanel {
+public class PanneauEchiquier extends JPanel implements Observateur {
     private JButton[][] boutons = new JButton[8][8];
     private EtatPartieEchecs partie;
     private ActionListener ecouteurJeuEchecs;
@@ -36,7 +38,17 @@ public class PanneauEchiquier extends JPanel {
                     boutons[i][j].setIcon(ServiceImages.getIconePourPiece(echiquier[i][j]));
             }
         this.add(p,BorderLayout.CENTER);
-       //partie.ajouterObservateur(this);
+        partie.ajouterObservateur(this);
+    }
+    public void seMettreAJour(Observable observable){ // completer mais pas tester
+        char[][] echiquier = partie.getEtatEchiquier();
+        for (int i = 0; i < boutons.length; i++)
+            for (int j = 0; i < boutons[i].length; i++){
+                boutons[i][j].setIcon(null);
+                if (echiquier[i][j] != ' ')
+                    boutons[i][j].setIcon(ServiceImages.getIconePourPiece(echiquier[i][j]));
+            }
+        observable.notifierObservateurs();
     }
 
     public void setEcouteurJeuEchecs(ActionListener ecouteurJeuEchecs) {

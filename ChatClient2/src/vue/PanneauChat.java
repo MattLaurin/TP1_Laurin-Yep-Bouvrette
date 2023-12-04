@@ -14,14 +14,21 @@ public class PanneauChat extends JPanel {
     protected JTextArea zoneChat;
     protected JTextField champDeSaisie;
 
-    public PanneauChat() {
-        //à compléter.
+    public PanneauChat() {  // completer et marche *******
+        this.zoneChat = new JTextArea();
+        this.champDeSaisie = new JTextField();
+        this.setLayout(new BorderLayout());
+        this.add(champDeSaisie, BorderLayout.SOUTH);
+        this.zoneChat.setEditable(false);
+        JScrollPane scrollTextArea = new JScrollPane(zoneChat);
+        this.add(scrollTextArea, BorderLayout.CENTER);
     }
 
     public void ajouter(String msg) {
         zoneChat.append("\n"+msg);
     }
-    public void setEcouteur(ActionListener ecouteur) {
+    public void setEcouteur(ActionListener ecouteur) {  //completer et marche *******
+        champDeSaisie.addActionListener(ecouteur);
         //Enregistrer l'écouteur auprès du champ de saisie
     }
 

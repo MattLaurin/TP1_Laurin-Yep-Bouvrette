@@ -19,7 +19,12 @@ public class EcouteurChatPrive extends EcouteurChatPublic {
     }
     //à compléter (redéfinir la méthode actionPerformed())
     public void actionPerformed(ActionEvent evt){
-
+        if (evt.getActionCommand().equals("ACCEPTER")){
+            clientChat.envoyer("CHESS ");
+        }
+        else if (evt.getActionCommand().equals("REFUSER")){
+            clientChat.envoyer("DECLINE ");
+        }
     }
 
 }

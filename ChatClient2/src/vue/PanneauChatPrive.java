@@ -20,7 +20,7 @@ public class PanneauChatPrive extends PanneauChat {
         bAccepterOuInviter.setActionCommand("ACCEPTER");
         bRefuser.setActionCommand("REFUSER");
 
-        JPanel bouton = new JPanel();
+        JPanel bouton = new JPanel(new FlowLayout(FlowLayout.RIGHT));
             bouton.add(bAccepterOuInviter);
             bouton.add(bRefuser);
         bRefuser.setVisible(false);

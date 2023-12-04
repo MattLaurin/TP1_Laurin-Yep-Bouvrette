@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Map;
 
 /**
@@ -119,7 +120,10 @@ public class PanneauPrincipal  extends JPanel {
     public void ajouterMessagePrive(String alias, String msg) {
         String message = alias+">>"+msg;
         System.out.println("PRIVÉ : "+alias+">>"+msg);
-        //à compléter
+
+        PanneauChatPrive pc = panneauxPrives.get(alias);
+        if(pc != null)
+            pc.ajouter(message);
     }
 
     public void inviteEchecs(String alias) {

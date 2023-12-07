@@ -153,9 +153,11 @@ public class GestionnaireEvenementClient2 implements GestionnaireEvenement {
                     System.out.println(client.getEtatPartieEchecs());
                     PanneauEchiquier panneauEchiquier = new PanneauEchiquier(client.getEtatPartieEchecs());
                     //à compléter
-                    panneauEchiquier.setEcouteurJeuEchecs(new EcouteurJeuEchecs(this.client));
-                    fenetreEchecs = new FenetreEchecs(panneauEchiquier, "Vous (" + str + ") contre" + arg);
+                    EcouteurJeuEchecs ecouteurJeuEchecs = new EcouteurJeuEchecs(this.client);
+                    panneauEchiquier.setEcouteurJeuEchecs(ecouteurJeuEchecs);
+                    fenetreEchecs = new FenetreEchecs(panneauEchiquier, "Vous (" + str + ") contre" + " " + arg);
                     panneauPrincipal.setFenetreEchecs(arg,fenetreEchecs);
+                    fenetreEchecs.setVisible(true);
                     break;
                 case "INVALID":
                     System.out.println(evenement.getArgument());

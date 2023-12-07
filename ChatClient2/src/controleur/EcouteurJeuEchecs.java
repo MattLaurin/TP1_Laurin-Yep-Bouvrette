@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 public class EcouteurJeuEchecs implements ActionListener {
 
     private ClientChat clientChat;
-    private String clic1;
+    private String clic1 = "";
     public EcouteurJeuEchecs(ClientChat clientChat) {
         this.clientChat = clientChat;
     }
@@ -20,16 +20,23 @@ public class EcouteurJeuEchecs implements ActionListener {
     public void actionPerformed(ActionEvent e) {    //completer reste a tester
         Object action = e.getSource();
         if (action instanceof JButton){
-            int x = ((JButton) action).getWidth() + 'a';
-            int y = ((JButton) action).getHeight() + 1;
-            if (clic1.isEmpty()){
-                clic1 = "" + (char)x + y;
-            }else {
-                String clic2 = "" + (char) x + y;
-                String deplacement = clic1 + clic2;
-                clientChat.envoyer("MOVE " + deplacement);
-                clic1 = "";
+            JButton boutonCliquer = (JButton) action;
+            String text = e.getActionCommand();
+
+            if(text != null && text.length() == 2) {
+                char x = text.charAt(0);
+                char y = text.charAt(1);
+
+                if (clic1.isEmpty()){
+                    clic1 = "" + x + y;
+                }else {
+                    String clic2 = "" + x + y;
+                    String deplacement = clic1 + clic2;
+                    clientChat.envoyer("MOVE " + deplacement);
+                    clic1 = "";
+                }
             }
+
         }
     }
 }

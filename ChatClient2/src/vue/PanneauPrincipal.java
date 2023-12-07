@@ -122,8 +122,7 @@ public class PanneauPrincipal  extends JPanel {
         System.out.println("PRIVÉ : "+alias+">>"+msg);
 
         PanneauChatPrive pc = panneauxPrives.get(alias);
-        if(pc != null)
-            pc.ajouter(message);
+        pc.ajouter(message);
     }
 
     public void inviteEchecs(String alias) {

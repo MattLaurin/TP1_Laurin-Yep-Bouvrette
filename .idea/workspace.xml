@@ -4,15 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout TP2">
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout partie 3 au complet. (matt et louis)">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/cavalier-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/cavalier-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/dame-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/dame-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/fou-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/fou-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/pion-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/pion-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/roi-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/roi-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/tour-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer2/imgs/tour-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/cavalier-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/cavalier-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/dame-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/dame-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/fou-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/fou-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/pion-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/pion-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/roi-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/roi-n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/tour-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/tour-n.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/ChatClient2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/ChatClient2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPublic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/commun/net/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurChatPrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauChat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer2/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/client/GestionnaireEvenementClient2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/client/GestionnaireEvenementClient2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/commun/net/Connexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/commun/net/Connexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/echecs/EtatPartieEchecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/echecs/EtatPartieEchecs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/programme/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/programme/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurChatPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurChatPrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurMenuPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurMenuPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauChatPrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauInvitations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauInvitations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/GestionnaireEvenementServeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/GestionnaireEvenementServeur.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,20 +73,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamy/IdeaProjects/TP1_Laurin-Yep-Bouvrette/ChatClient/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Matthieu/Desktop/Labo 10 et graphisme java/TP1_Laurin-Yep-Bouvrette",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matthieu\Desktop\Labo 10 et graphisme java\TP1_Laurin-Yep-Bouvrette" />
+      <recent name="C:\Users\Matthieu\Desktop\Labo 10 et graphisme java\TP1_Laurin-Yep-Bouvrette\ChatServer2" />
       <recent name="C:\Users\adamy\IdeaProjects\TP1_Laurin-Yep-Bouvrette\ChatClient\src" />
       <recent name="C:\Users\Matthieu\Desktop\TP---TEST-Laurin\ChatServer\src" />
     </key>
@@ -236,8 +273,7 @@
     <MESSAGE value="Fix de move encore 2" />
     <MESSAGE value="ajout mat après qu'il ai été implenté" />
     <MESSAGE value="Ajout TP2" />
-    <MESSAGE value="l" />
-    <option name="LAST_COMMIT_MESSAGE" value="l" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout TP2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

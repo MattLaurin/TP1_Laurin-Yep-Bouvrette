@@ -109,29 +109,37 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                 case "PRV" :  //envoyer un message privé
                     msg = evenement.getArgument();
                     int i = msg.indexOf(' ');
-                    if (i == -1) //message vide
+                    if (i == -1) { //message vide
                         break;
+                    }
                     else {
                         aliasExpediteur = cnx.getAlias();
                         aliasDestinataire = msg.substring(0, i);
-                        if (!serveurChat.enPrive(aliasExpediteur,aliasDestinataire))
+                        if (!serveurChat.enPrive(aliasExpediteur,aliasDestinataire)) {
                             break;
+                        }
                         cnx2 = serveurChat.getConnexionParAlias(aliasDestinataire);
-                        if (cnx2!=null)
-                            cnx2.envoyer("PRV "+aliasExpediteur+" "+msg.substring(i).trim());
+                        if (cnx2!=null) {
+                            cnx2.envoyer("PRV " + aliasExpediteur + " " + msg.substring(i).trim());
+                        }
                     }
                     break;
                 case "QUIT" : //quitter un chat privé
+                    System.out.println("allo223");
                     aliasExpediteur = cnx.getAlias();
                     aliasDestinataire = evenement.getArgument().trim();
-                    if ("".equals(aliasDestinataire))  //hote non indiqué.
+                    if ("".equals(aliasDestinataire)) {  //hote non indiqué.
+                        System.out.println("allo3333");
                         break;
+                    }
                     if (serveurChat.supprimeSalonPrive(aliasExpediteur,aliasDestinataire)) {
                         cnx2 = serveurChat.getConnexionParAlias(aliasDestinataire);
+
                         if (cnx2==null) //l'hote n'est pas connecté.
                             break;
                         cnx.envoyer("QUIT "+aliasDestinataire);
                         cnx2.envoyer("QUIT "+aliasExpediteur);
+
                     }
                     break;
     /******************* JEU D'ÉCHECS EN RÉSEAU *******************/

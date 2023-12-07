@@ -3,6 +3,7 @@ package controleur;
 import com.chat.client.ClientChat;
 import vue.PanneauChat;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**
@@ -19,12 +20,34 @@ public class EcouteurChatPrive extends EcouteurChatPublic {
     }
     //à compléter (redéfinir la méthode actionPerformed())
     public void actionPerformed(ActionEvent evt){
+        Object event = evt.getSource();
         if (evt.getActionCommand().equals("ACCEPTER")){
-            clientChat.envoyer("CHESS ");
+            this.clientChat.envoyer("CHESS " + alias);
         }
         else if (evt.getActionCommand().equals("REFUSER")){
-            clientChat.envoyer("DECLINE ");
+            this.clientChat.envoyer("DECLINE ");
         }
+        else if (event instanceof JTextField){
+            String msg = ((JTextField) event).getText();
+            if(!msg.isEmpty()){
+                if (msg.equals("QUIT")) {
+                    this.clientChat.envoyer("QUIT " + this.alias);
+                }
+                else {
+                    if (msg.equals("ABANDON")){
+                        this.clientChat.envoyer("ABANDON " +this.alias);
+                    }
+                    else{
+                        this.panneauChat.ajouter("MOI>> " + msg);
+                        ((JTextField) event).setText("");
+                        this.clientChat.envoyer("PRV " + this.alias + " " + msg);
+                    }
+                }
+            }
+
+
+        }
+
     }
 
 }

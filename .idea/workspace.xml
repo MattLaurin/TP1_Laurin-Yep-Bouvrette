@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="Ajout partie 3 au complet. (matt et louis)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e1973e49-62ce-438d-85d9-d4a58e22cf2e" name="Changes" comment="version ou tout marche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/client/GestionnaireEvenementClient2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/com/chat/echecs/EtatPartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/controleur/EcouteurJeuEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient2/src/vue/PanneauEchiquier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/echecs/EtatPartieEchecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/com/chat/echecs/EtatPartieEchecs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurJeuEchecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/controleur/EcouteurJeuEchecs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauEchiquier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatClient2/vue/PanneauEchiquier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/Serveur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer2/com/chat/serveur/Serveur.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701479272771</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="version ou tout marche">
+      <option name="closed" value="true" />
+      <created>1701978685562</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701978685562</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +242,8 @@
     <MESSAGE value="Fix de move encore 2" />
     <MESSAGE value="ajout mat après qu'il ai été implenté" />
     <MESSAGE value="Ajout TP2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout TP2" />
+    <MESSAGE value="version ou tout marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="version ou tout marche" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

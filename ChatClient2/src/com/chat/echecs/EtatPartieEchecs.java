@@ -50,7 +50,7 @@ public class EtatPartieEchecs extends Observable {
         etatEchiquier[0][4] = 'r';
         etatEchiquier[7][4] = 'R';
     }
-    public boolean move(String deplacement) {   // completer reste a tester
+    public boolean move(String deplacement) {   // completer
         boolean res = false;
         if (deplacement.charAt(2) == '-' && deplacement.length() == 5 || deplacement.charAt(2) == ' ' && deplacement.length() == 5
                 || deplacement.length() == 4){
@@ -72,9 +72,11 @@ public class EtatPartieEchecs extends Observable {
                 etatEchiquier[EchecsUtil.indiceLigne(posInitiale)][EchecsUtil.indiceColonne(posInitiale)] = ' ';
 
                 if (etatEchiquier[ligneFinale][colonneFinale] == 'p' && ligneFinale == 7)
-                    etatEchiquier[ligneFinale][colonneFinale] = 'r';
+                    etatEchiquier[ligneFinale][colonneFinale] = 'd';
                 if (etatEchiquier[ligneFinale][colonneFinale] == 'P' && ligneFinale == 0)
-                    etatEchiquier[ligneFinale][colonneFinale] = 'R';
+                    etatEchiquier[ligneFinale][colonneFinale] = 'D';
+
+                notifierObservateurs();
             }
         }
         return res;

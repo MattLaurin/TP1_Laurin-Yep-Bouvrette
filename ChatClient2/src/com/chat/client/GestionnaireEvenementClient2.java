@@ -144,7 +144,7 @@ public class GestionnaireEvenementClient2 implements GestionnaireEvenement {
                     alias = evenement.getArgument();
                     panneauPrincipal.annuleInviteEchecs(alias);
                     break;
-                case "CHESSOK": //completer reste a tester
+                case "CHESSOK": //completer
                     arg = evenement.getArgument();
                     str = arg.substring(arg.indexOf(" ")+1);
                     arg = arg.substring(0,arg.indexOf(" "));

@@ -40,7 +40,7 @@ public class PanneauEchiquier extends JPanel implements Observateur {
         this.add(p,BorderLayout.CENTER);
         partie.ajouterObservateur(this);
     }
-    public void seMettreAJour(Observable observable){ // completer mais pas tester
+    public void seMettreAJour(Observable observable){ // completer
         char[][] echiquier = partie.getEtatEchiquier();
         for (int i = 0; i < boutons.length; i++)
             for (int j = 0; j < boutons[i].length; j++){
@@ -48,7 +48,6 @@ public class PanneauEchiquier extends JPanel implements Observateur {
                 if (echiquier[i][j] != ' ')
                     boutons[i][j].setIcon(ServiceImages.getIconePourPiece(echiquier[i][j]));
             }
-        //observable.notifierObservateurs();
     }
 
     public void setEcouteurJeuEchecs(ActionListener ecouteurJeuEchecs) {

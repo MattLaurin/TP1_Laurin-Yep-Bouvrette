@@ -17,10 +17,9 @@ public class EcouteurJeuEchecs implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {    //completer reste a tester
+    public void actionPerformed(ActionEvent e) {    //completer
         Object action = e.getSource();
         if (action instanceof JButton){
-            JButton boutonCliquer = (JButton) action;
             String text = e.getActionCommand();
 
             if(text != null && text.length() == 2) {
